@@ -11,22 +11,22 @@
 	</td>
 
 	<template v-for="name in stats.names">
-	  <td>{{stats_multiplier_pretty}}</td>
+	  <td class="monospace-cell">{{stats_multiplier_pretty}}</td>
 	</template>
 
-	<td class="weight-internal-column" colspan="2">{{se_subsystem.weight_cap.toFixed(2)}}</td>
+	<td class="weight-internal-column monospace-cell" colspan="2">{{se_subsystem.weight_cap.toFixed(2)}}</td>
 
-	<td class="br-column">{{se_subsystem.cost_BR_frame.toFixed(2)}}</td>
-	<td class="sr-column">{{se_subsystem.cost_SR_mult.toFixed(2)}}x</td>
+	<td class="br-column monospace-cell">{{se_subsystem.cost_BR_frame.toFixed(2)}}</td>
+	<td class="sr-column monospace-cell">{{se_subsystem.cost_SR_mult.toFixed(2)}}x</td>
 
-	<td class="power-cost-column"></td>
-	<td class="power-gen-column"></td>
+	<td class="power-cost-column monospace-cell"></td>
+	<td class="power-gen-column monospace-cell"></td>
 
 	<template v-for="name in crew.names">
 	  <StatlineCell :stats="crew_mult_pretty" :name="name" :ispretty="false"></StatlineCell>
 	</template>
 
-	<td class="build-time-column">{{build_time}}</td>
+	<td class="build-time-column monospace-cell">{{build_time}}</td>
   </tr>
 
 

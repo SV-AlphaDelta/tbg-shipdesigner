@@ -1,6 +1,8 @@
 <template>
   <tr class="principal-frame-raw">
-	<td class="name-column" colspan="2">Size: {{frame_size.toFixed(2)}}</td>
+	<td class="name-column" colspan="2">
+		Size: <span class="monospace-cell">{{frame_size.toFixed(2)}}</span>
+	</td>
 
 	<td class="part-column">
 	  <select v-model="principal_frame" class="part-column-select">
@@ -12,20 +14,20 @@
 	  <StatlineCell :stats="stats_raw" :name="name"></StatlineCell>
 	</template>
 	
-	<td class="weight-internal-column" v-bind:class="weight_summary_class">{{se_design.weight_internal.toFixed(2)}}</td>
-	<td class="weight-external-column">{{se_design.weight_external.toFixed(2)}}</td>
+	<td class="weight-internal-column monospace-cell" v-bind:class="weight_summary_class">{{se_design.weight_internal.toFixed(2)}}</td>
+	<td class="weight-external-column monospace-cell">{{se_design.weight_external.toFixed(2)}}</td>
 
-	<td class="br-column">{{se_design.cost_BR_raw.toFixed(2)}}</td>
-	<td class="sr-column">{{se_design.cost_SR_raw.toFixed(2)}}</td>
+	<td class="br-column monospace-cell">{{se_design.cost_BR_raw.toFixed(2)}}</td>
+	<td class="sr-column monospace-cell">{{se_design.cost_SR_raw.toFixed(2)}}</td>
 
-	<td class="power-cost-column">{{se_design.cost_power_raw.toFixed(2)}}</td>
-	<td class="power-gen-column">{{se_design.power_generation_raw.toFixed(2)}}</td>
+	<td class="power-cost-column monospace-cell">{{se_design.cost_power_raw.toFixed(2)}}</td>
+	<td class="power-gen-column monospace-cell">{{se_design.power_generation_raw.toFixed(2)}}</td>
 
 	<template v-for="name in crew_raw.names">
 	  <StatlineCell :stats="crew_raw" :name="name"></StatlineCell>
 	</template>
 
-	<td class="build-time-column">{{build_time_frame}}</td>
+	<td class="build-time-column monospace-cell">{{build_time_frame}}</td>
   </tr>
 </template>
 

@@ -98,6 +98,8 @@ export default {
 
 <style>
 
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+
 .root {
 	width: 100%;
 	height: 100%;
@@ -121,6 +123,11 @@ export default {
 .footer {
 	flex: 0 0 auto;
 	border-top: 2px solid;
+}
+
+.monospace-cell {
+	font-family: 'Roboto Mono', monospace;
+	font-size: 12px;
 }
 
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <td class="stat-column">{{pretty}}</td>
+  <td class="stat-column monospace-cell">{{pretty}}</td>
 </template>
 
 

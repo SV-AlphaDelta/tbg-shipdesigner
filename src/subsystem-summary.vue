@@ -1,7 +1,7 @@
 <template>
 
   <tr class="subsystem-summary">
-	<td class="name-column"
+	<td class="name-column monospace-cell"
 		v-bind:class="weight_summary_class"
 		colspan="2">{{se_subsystem.weight_internal.toFixed(2)}}/{{se_subsystem.weight_cap.toFixed(2)}}</td>
 
@@ -11,14 +11,14 @@
 	  <StatlineCell :stats="stats" :name="name"></StatlineCell>
 	</template>
 
-	<td class="weight-internal-column" v-bind:class="weight_summary_class">{{se_subsystem.weight_internal.toFixed(2)}}</td>
-	<td class="weight-external-column">{{se_subsystem.weight_external.toFixed(2)}}</td>
+	<td class="weight-internal-column monospace-cell" v-bind:class="weight_summary_class">{{se_subsystem.weight_internal.toFixed(2)}}</td>
+	<td class="weight-external-column monospace-cell">{{se_subsystem.weight_external.toFixed(2)}}</td>
 
-	<td class="br-column">{{se_subsystem.cost_BR.toFixed(2)}}</td>
-	<td class="sr-column">{{se_subsystem.cost_SR.toFixed(2)}}</td>
+	<td class="br-column monospace-cell">{{se_subsystem.cost_BR.toFixed(2)}}</td>
+	<td class="sr-column monospace-cell">{{se_subsystem.cost_SR.toFixed(2)}}</td>
 
-	<td class="power-cost-column">{{se_subsystem.cost_power.toFixed(2)}}</td>
-	<td class="power-gen-column">{{se_subsystem.power_generation.toFixed(2)}}</td>
+	<td class="power-cost-column monospace-cell">{{se_subsystem.cost_power.toFixed(2)}}</td>
+	<td class="power-gen-column monospace-cell">{{se_subsystem.power_generation.toFixed(2)}}</td>
 
 	<template v-for="name in crew.names">
 	  <StatlineCell :stats="crew" :name="name"></StatlineCell>

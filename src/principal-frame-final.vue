@@ -10,15 +10,15 @@
 	  <StatlineCell :stats="stats" :name="name" :fixed="0"></StatlineCell>
 	</template>
 	
-	<td class="weight-internal-column" colspan="2">{{se_design.weight_total}}</td>
+	<td class="weight-internal-column monospace-cell" colspan="2">{{se_design.weight_total}}</td>
 
-	<td class="br-column">{{se_design.cost_BR}}</td>
-	<td class="sr-column">{{se_design.cost_SR}}</td>
+	<td class="br-column monospace-cell">{{se_design.cost_BR}}</td>
+	<td class="sr-column monospace-cell">{{se_design.cost_SR}}</td>
 
-	<td class="power-cost-column"
+	<td class="power-cost-column monospace-cell"
 		v-bind:title="power_final_title"
 		v-bind:class="power_final_class">{{se_design.cost_power}}</td>
-	<td class="power-gen-column"
+	<td class="power-gen-column monospace-cell"
 		v-bind:title="power_final_title"
 		v-bind:class="power_final_class">{{se_design.power_generation}}</td>
 
@@ -26,7 +26,7 @@
 	  <StatlineCell :stats="crew" :name="name" :fixed="0"></StatlineCell>
 	</template>
 
-	<td class="build-time-column">{{build_time}}</td>
+	<td class="build-time-column monospace-cell">{{build_time}}</td>
   </tr>
 </template>
 

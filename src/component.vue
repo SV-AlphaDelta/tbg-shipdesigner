@@ -30,20 +30,20 @@
 	  <StatlineCell :stats="stats" :name="name"></StatlineCell>
 	</template>
 
-	<td class="weight-internal-column">{{weight_internal}}</td>
-	<td class="weight-external-column">{{weight_external}}</td>
+	<td class="weight-internal-column monospace-cell">{{weight_internal}}</td>
+	<td class="weight-external-column monospace-cell">{{weight_external}}</td>
 
-	<td class="br-column">{{cost_br}}</td>
-	<td class="sr-column">{{cost_sr}}</td>
+	<td class="br-column monospace-cell">{{cost_br}}</td>
+	<td class="sr-column monospace-cell">{{cost_sr}}</td>
 
-	<td class="power-cost-column">{{power_cost}}</td>
-	<td class="power-gen-column">{{power_gen}}</td>
+	<td class="power-cost-column monospace-cell">{{power_cost}}</td>
+	<td class="power-gen-column monospace-cell">{{power_gen}}</td>
 
 	<template v-for="name in crew.names">
 	  <StatlineCell :stats="crew" :name="name"></StatlineCell>
 	</template>
 
-	<td class="build-time-column"></td>
+	<td class="build-time-column monospace-cell"></td>
   </tr>
 </template>
 
@@ -179,7 +179,6 @@ export default {
 </script>
 
 <style>
-  
 </style>
 
 <style scoped>
